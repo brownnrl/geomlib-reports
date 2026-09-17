@@ -1,0 +1,964 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/Colors.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../index.html">All files</a> / <a href="index.html">src</a> Colors.ts</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>293/293</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">92.64% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>63/68</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>8/8</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>293/293</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a>
+<a name='L117'></a><a href='#L117'>117</a>
+<a name='L118'></a><a href='#L118'>118</a>
+<a name='L119'></a><a href='#L119'>119</a>
+<a name='L120'></a><a href='#L120'>120</a>
+<a name='L121'></a><a href='#L121'>121</a>
+<a name='L122'></a><a href='#L122'>122</a>
+<a name='L123'></a><a href='#L123'>123</a>
+<a name='L124'></a><a href='#L124'>124</a>
+<a name='L125'></a><a href='#L125'>125</a>
+<a name='L126'></a><a href='#L126'>126</a>
+<a name='L127'></a><a href='#L127'>127</a>
+<a name='L128'></a><a href='#L128'>128</a>
+<a name='L129'></a><a href='#L129'>129</a>
+<a name='L130'></a><a href='#L130'>130</a>
+<a name='L131'></a><a href='#L131'>131</a>
+<a name='L132'></a><a href='#L132'>132</a>
+<a name='L133'></a><a href='#L133'>133</a>
+<a name='L134'></a><a href='#L134'>134</a>
+<a name='L135'></a><a href='#L135'>135</a>
+<a name='L136'></a><a href='#L136'>136</a>
+<a name='L137'></a><a href='#L137'>137</a>
+<a name='L138'></a><a href='#L138'>138</a>
+<a name='L139'></a><a href='#L139'>139</a>
+<a name='L140'></a><a href='#L140'>140</a>
+<a name='L141'></a><a href='#L141'>141</a>
+<a name='L142'></a><a href='#L142'>142</a>
+<a name='L143'></a><a href='#L143'>143</a>
+<a name='L144'></a><a href='#L144'>144</a>
+<a name='L145'></a><a href='#L145'>145</a>
+<a name='L146'></a><a href='#L146'>146</a>
+<a name='L147'></a><a href='#L147'>147</a>
+<a name='L148'></a><a href='#L148'>148</a>
+<a name='L149'></a><a href='#L149'>149</a>
+<a name='L150'></a><a href='#L150'>150</a>
+<a name='L151'></a><a href='#L151'>151</a>
+<a name='L152'></a><a href='#L152'>152</a>
+<a name='L153'></a><a href='#L153'>153</a>
+<a name='L154'></a><a href='#L154'>154</a>
+<a name='L155'></a><a href='#L155'>155</a>
+<a name='L156'></a><a href='#L156'>156</a>
+<a name='L157'></a><a href='#L157'>157</a>
+<a name='L158'></a><a href='#L158'>158</a>
+<a name='L159'></a><a href='#L159'>159</a>
+<a name='L160'></a><a href='#L160'>160</a>
+<a name='L161'></a><a href='#L161'>161</a>
+<a name='L162'></a><a href='#L162'>162</a>
+<a name='L163'></a><a href='#L163'>163</a>
+<a name='L164'></a><a href='#L164'>164</a>
+<a name='L165'></a><a href='#L165'>165</a>
+<a name='L166'></a><a href='#L166'>166</a>
+<a name='L167'></a><a href='#L167'>167</a>
+<a name='L168'></a><a href='#L168'>168</a>
+<a name='L169'></a><a href='#L169'>169</a>
+<a name='L170'></a><a href='#L170'>170</a>
+<a name='L171'></a><a href='#L171'>171</a>
+<a name='L172'></a><a href='#L172'>172</a>
+<a name='L173'></a><a href='#L173'>173</a>
+<a name='L174'></a><a href='#L174'>174</a>
+<a name='L175'></a><a href='#L175'>175</a>
+<a name='L176'></a><a href='#L176'>176</a>
+<a name='L177'></a><a href='#L177'>177</a>
+<a name='L178'></a><a href='#L178'>178</a>
+<a name='L179'></a><a href='#L179'>179</a>
+<a name='L180'></a><a href='#L180'>180</a>
+<a name='L181'></a><a href='#L181'>181</a>
+<a name='L182'></a><a href='#L182'>182</a>
+<a name='L183'></a><a href='#L183'>183</a>
+<a name='L184'></a><a href='#L184'>184</a>
+<a name='L185'></a><a href='#L185'>185</a>
+<a name='L186'></a><a href='#L186'>186</a>
+<a name='L187'></a><a href='#L187'>187</a>
+<a name='L188'></a><a href='#L188'>188</a>
+<a name='L189'></a><a href='#L189'>189</a>
+<a name='L190'></a><a href='#L190'>190</a>
+<a name='L191'></a><a href='#L191'>191</a>
+<a name='L192'></a><a href='#L192'>192</a>
+<a name='L193'></a><a href='#L193'>193</a>
+<a name='L194'></a><a href='#L194'>194</a>
+<a name='L195'></a><a href='#L195'>195</a>
+<a name='L196'></a><a href='#L196'>196</a>
+<a name='L197'></a><a href='#L197'>197</a>
+<a name='L198'></a><a href='#L198'>198</a>
+<a name='L199'></a><a href='#L199'>199</a>
+<a name='L200'></a><a href='#L200'>200</a>
+<a name='L201'></a><a href='#L201'>201</a>
+<a name='L202'></a><a href='#L202'>202</a>
+<a name='L203'></a><a href='#L203'>203</a>
+<a name='L204'></a><a href='#L204'>204</a>
+<a name='L205'></a><a href='#L205'>205</a>
+<a name='L206'></a><a href='#L206'>206</a>
+<a name='L207'></a><a href='#L207'>207</a>
+<a name='L208'></a><a href='#L208'>208</a>
+<a name='L209'></a><a href='#L209'>209</a>
+<a name='L210'></a><a href='#L210'>210</a>
+<a name='L211'></a><a href='#L211'>211</a>
+<a name='L212'></a><a href='#L212'>212</a>
+<a name='L213'></a><a href='#L213'>213</a>
+<a name='L214'></a><a href='#L214'>214</a>
+<a name='L215'></a><a href='#L215'>215</a>
+<a name='L216'></a><a href='#L216'>216</a>
+<a name='L217'></a><a href='#L217'>217</a>
+<a name='L218'></a><a href='#L218'>218</a>
+<a name='L219'></a><a href='#L219'>219</a>
+<a name='L220'></a><a href='#L220'>220</a>
+<a name='L221'></a><a href='#L221'>221</a>
+<a name='L222'></a><a href='#L222'>222</a>
+<a name='L223'></a><a href='#L223'>223</a>
+<a name='L224'></a><a href='#L224'>224</a>
+<a name='L225'></a><a href='#L225'>225</a>
+<a name='L226'></a><a href='#L226'>226</a>
+<a name='L227'></a><a href='#L227'>227</a>
+<a name='L228'></a><a href='#L228'>228</a>
+<a name='L229'></a><a href='#L229'>229</a>
+<a name='L230'></a><a href='#L230'>230</a>
+<a name='L231'></a><a href='#L231'>231</a>
+<a name='L232'></a><a href='#L232'>232</a>
+<a name='L233'></a><a href='#L233'>233</a>
+<a name='L234'></a><a href='#L234'>234</a>
+<a name='L235'></a><a href='#L235'>235</a>
+<a name='L236'></a><a href='#L236'>236</a>
+<a name='L237'></a><a href='#L237'>237</a>
+<a name='L238'></a><a href='#L238'>238</a>
+<a name='L239'></a><a href='#L239'>239</a>
+<a name='L240'></a><a href='#L240'>240</a>
+<a name='L241'></a><a href='#L241'>241</a>
+<a name='L242'></a><a href='#L242'>242</a>
+<a name='L243'></a><a href='#L243'>243</a>
+<a name='L244'></a><a href='#L244'>244</a>
+<a name='L245'></a><a href='#L245'>245</a>
+<a name='L246'></a><a href='#L246'>246</a>
+<a name='L247'></a><a href='#L247'>247</a>
+<a name='L248'></a><a href='#L248'>248</a>
+<a name='L249'></a><a href='#L249'>249</a>
+<a name='L250'></a><a href='#L250'>250</a>
+<a name='L251'></a><a href='#L251'>251</a>
+<a name='L252'></a><a href='#L252'>252</a>
+<a name='L253'></a><a href='#L253'>253</a>
+<a name='L254'></a><a href='#L254'>254</a>
+<a name='L255'></a><a href='#L255'>255</a>
+<a name='L256'></a><a href='#L256'>256</a>
+<a name='L257'></a><a href='#L257'>257</a>
+<a name='L258'></a><a href='#L258'>258</a>
+<a name='L259'></a><a href='#L259'>259</a>
+<a name='L260'></a><a href='#L260'>260</a>
+<a name='L261'></a><a href='#L261'>261</a>
+<a name='L262'></a><a href='#L262'>262</a>
+<a name='L263'></a><a href='#L263'>263</a>
+<a name='L264'></a><a href='#L264'>264</a>
+<a name='L265'></a><a href='#L265'>265</a>
+<a name='L266'></a><a href='#L266'>266</a>
+<a name='L267'></a><a href='#L267'>267</a>
+<a name='L268'></a><a href='#L268'>268</a>
+<a name='L269'></a><a href='#L269'>269</a>
+<a name='L270'></a><a href='#L270'>270</a>
+<a name='L271'></a><a href='#L271'>271</a>
+<a name='L272'></a><a href='#L272'>272</a>
+<a name='L273'></a><a href='#L273'>273</a>
+<a name='L274'></a><a href='#L274'>274</a>
+<a name='L275'></a><a href='#L275'>275</a>
+<a name='L276'></a><a href='#L276'>276</a>
+<a name='L277'></a><a href='#L277'>277</a>
+<a name='L278'></a><a href='#L278'>278</a>
+<a name='L279'></a><a href='#L279'>279</a>
+<a name='L280'></a><a href='#L280'>280</a>
+<a name='L281'></a><a href='#L281'>281</a>
+<a name='L282'></a><a href='#L282'>282</a>
+<a name='L283'></a><a href='#L283'>283</a>
+<a name='L284'></a><a href='#L284'>284</a>
+<a name='L285'></a><a href='#L285'>285</a>
+<a name='L286'></a><a href='#L286'>286</a>
+<a name='L287'></a><a href='#L287'>287</a>
+<a name='L288'></a><a href='#L288'>288</a>
+<a name='L289'></a><a href='#L289'>289</a>
+<a name='L290'></a><a href='#L290'>290</a>
+<a name='L291'></a><a href='#L291'>291</a>
+<a name='L292'></a><a href='#L292'>292</a>
+<a name='L293'></a><a href='#L293'>293</a>
+<a name='L294'></a><a href='#L294'>294</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">60648x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">20296x</span>
+<span class="cline-any cline-yes">20296x</span>
+<span class="cline-any cline-yes">20296x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">5021x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">4988x</span>
+<span class="cline-any cline-yes">4988x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">1905x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">1891x</span>
+<span class="cline-any cline-yes">1891x</span>
+<span class="cline-any cline-yes">1891x</span>
+<span class="cline-any cline-yes">1891x</span>
+<span class="cline-any cline-yes">1891x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">1887x</span>
+<span class="cline-any cline-yes">1887x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">1802x</span>
+<span class="cline-any cline-yes">1802x</span>
+<span class="cline-any cline-yes">1802x</span>
+<span class="cline-any cline-yes">1802x</span>
+<span class="cline-any cline-yes">1800x</span>
+<span class="cline-any cline-yes">1800x</span>
+<span class="cline-any cline-yes">1800x</span>
+<span class="cline-any cline-yes">1802x</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-yes">87x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-yes">60649x</span>
+<span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-yes">79x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14902x</span>
+<span class="cline-any cline-yes">14902x</span>
+<span class="cline-any cline-yes">14902x</span>
+<span class="cline-any cline-yes">14901x</span>
+<span class="cline-any cline-yes">14901x</span>
+<span class="cline-any cline-yes">14902x</span>
+<span class="cline-any cline-yes">14902x</span>
+<span class="cline-any cline-yes">14902x</span>
+<span class="cline-any cline-yes">14902x</span>
+<span class="cline-any cline-yes">14902x</span>
+<span class="cline-any cline-yes">14902x</span>
+<span class="cline-any cline-yes">14901x</span>
+<span class="cline-any cline-yes">14901x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">8x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14870x</span>
+<span class="cline-any cline-yes">14870x</span>
+<span class="cline-any cline-yes">14870x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">14911x</span>
+<span class="cline-any cline-yes">14911x</span>
+<span class="cline-any cline-yes">14911x</span>
+<span class="cline-any cline-yes">14911x</span>
+<span class="cline-any cline-yes">14911x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">14911x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-yes">14911x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">14911x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-yes">1803x</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">/*----------------------------------------------------------------------+
+|    Color parsing and manipulation.                                    |
+|    Matches the behavior of Java's Geometry.parseColor() exactly:      |
+|      1. null / "none" / "0" / numeric 0  → null (transparent)         |
+|      2. "random"                         → random pastel              |
+|      3. "background"                     → bgcolor                    |
+|      4. "brighter"                       → brighter(bgcolor)          |
+|      5. "darker"                         → darker(bgcolor)            |
+|      6. Named color (CSS set, case-insensitive; 5 Java exceptions)    |
+|      7. Hex integer "rrggbb"             → rgb string                 |
+|      8. HSB comma triple "h,s,b"         → rgb string                 |
+|      9. Fallback                         → null                       |
++----------------------------------------------------------------------*/
+&nbsp;
+// The original 13 Java AWT named colors, with their exact (camelCase)
+// spellings. Kept as the back-compat fast path: existing fixtures/decks use
+// these exact names, so every current render resolves here, byte-identically.
+// Five of these DELIBERATELY differ from W3C/CSS and keep the Java values —
+// green, orange, pink, darkGray, lightGray (#125). cssColors below also pins
+// those five (under their lowercase keys) so case-insensitive lookups agree.
+export const colors : {[colorName: string]: string} =
+{
+    "black": "rgb(0,0,0)",
+    "blue": "rgb(0,0,255)",
+    "cyan": "rgb(0,255,255)",
+    "darkGray": "rgb(64,64,64)",
+    "gray": "rgb(128,128,128)",
+    "green": "rgb(0,255,0)",
+    "lightGray": "rgb(192,192,192)",
+    "magenta": "rgb(255,0,255)",
+    "orange": "rgb(255,200,0)",
+    "pink": "rgb(255,175,175)",
+    "red": "rgb(255,0,0)",
+    "white": "rgb(255,255,255)",
+    "yellow": "rgb(255,255,0)"
+};
+&nbsp;
+// The full W3C/CSS named-color set (CSS Color Module Level 4), lowercase keys,
+// looked up case-insensitively (#125). Static literal — NO runtime dependency.
+// FIVE entries deviate from the CSS value to preserve geomlib/Java AWT history
+// (marked GEOMLIB below); `grey`-spelling aliases are included. New names take
+// their standard CSS rgb. Authors can now write crimson/teal/gold/navy/etc.
+// instead of falling through to silent-null.
+export const cssColors : {[colorName: string]: string} =
+{
+    "aliceblue": "rgb(240,248,255)", "antiquewhite": "rgb(250,235,215)",
+    "aqua": "rgb(0,255,255)", "aquamarine": "rgb(127,255,212)",
+    "azure": "rgb(240,255,255)", "beige": "rgb(245,245,220)",
+    "bisque": "rgb(255,228,196)", "black": "rgb(0,0,0)",
+    "blanchedalmond": "rgb(255,235,205)", "blue": "rgb(0,0,255)",
+    "blueviolet": "rgb(138,43,226)", "brown": "rgb(165,42,42)",
+    "burlywood": "rgb(222,184,135)", "cadetblue": "rgb(95,158,160)",
+    "chartreuse": "rgb(127,255,0)", "chocolate": "rgb(210,105,30)",
+    "coral": "rgb(255,127,80)", "cornflowerblue": "rgb(100,149,237)",
+    "cornsilk": "rgb(255,248,220)", "crimson": "rgb(220,20,60)",
+    "cyan": "rgb(0,255,255)", "darkblue": "rgb(0,0,139)",
+    "darkcyan": "rgb(0,139,139)", "darkgoldenrod": "rgb(184,134,11)",
+    "darkgray": "rgb(64,64,64)", "darkgrey": "rgb(64,64,64)",          // GEOMLIB (CSS: 169,169,169)
+    "darkgreen": "rgb(0,100,0)", "darkkhaki": "rgb(189,183,107)",
+    "darkmagenta": "rgb(139,0,139)", "darkolivegreen": "rgb(85,107,47)",
+    "darkorange": "rgb(255,140,0)", "darkorchid": "rgb(153,50,204)",
+    "darkred": "rgb(139,0,0)", "darksalmon": "rgb(233,150,122)",
+    "darkseagreen": "rgb(143,188,143)", "darkslateblue": "rgb(72,61,139)",
+    "darkslategray": "rgb(47,79,79)", "darkslategrey": "rgb(47,79,79)",
+    "darkturquoise": "rgb(0,206,209)", "darkviolet": "rgb(148,0,211)",
+    "deeppink": "rgb(255,20,147)", "deepskyblue": "rgb(0,191,255)",
+    "dimgray": "rgb(105,105,105)", "dimgrey": "rgb(105,105,105)",
+    "dodgerblue": "rgb(30,144,255)", "firebrick": "rgb(178,34,34)",
+    "floralwhite": "rgb(255,250,240)", "forestgreen": "rgb(34,139,34)",
+    "fuchsia": "rgb(255,0,255)", "gainsboro": "rgb(220,220,220)",
+    "ghostwhite": "rgb(248,248,255)", "gold": "rgb(255,215,0)",
+    "goldenrod": "rgb(218,165,32)", "gray": "rgb(128,128,128)",
+    "grey": "rgb(128,128,128)", "green": "rgb(0,255,0)",              // GEOMLIB (CSS: 0,128,0)
+    "greenyellow": "rgb(173,255,47)", "honeydew": "rgb(240,255,240)",
+    "hotpink": "rgb(255,105,180)", "indianred": "rgb(205,92,92)",
+    "indigo": "rgb(75,0,130)", "ivory": "rgb(255,255,240)",
+    "khaki": "rgb(240,230,140)", "lavender": "rgb(230,230,250)",
+    "lavenderblush": "rgb(255,240,245)", "lawngreen": "rgb(124,252,0)",
+    "lemonchiffon": "rgb(255,250,205)", "lightblue": "rgb(173,216,230)",
+    "lightcoral": "rgb(240,128,128)", "lightcyan": "rgb(224,255,255)",
+    "lightgoldenrodyellow": "rgb(250,250,210)",
+    "lightgray": "rgb(192,192,192)", "lightgrey": "rgb(192,192,192)",  // GEOMLIB (CSS: 211,211,211)
+    "lightgreen": "rgb(144,238,144)", "lightpink": "rgb(255,182,193)",
+    "lightsalmon": "rgb(255,160,122)", "lightseagreen": "rgb(32,178,170)",
+    "lightskyblue": "rgb(135,206,250)", "lightslategray": "rgb(119,136,153)",
+    "lightslategrey": "rgb(119,136,153)", "lightsteelblue": "rgb(176,196,222)",
+    "lightyellow": "rgb(255,255,224)", "lime": "rgb(0,255,0)",
+    "limegreen": "rgb(50,205,50)", "linen": "rgb(250,240,230)",
+    "magenta": "rgb(255,0,255)", "maroon": "rgb(128,0,0)",
+    "mediumaquamarine": "rgb(102,205,170)", "mediumblue": "rgb(0,0,205)",
+    "mediumorchid": "rgb(186,85,211)", "mediumpurple": "rgb(147,112,219)",
+    "mediumseagreen": "rgb(60,179,113)", "mediumslateblue": "rgb(123,104,238)",
+    "mediumspringgreen": "rgb(0,250,154)", "mediumturquoise": "rgb(72,209,204)",
+    "mediumvioletred": "rgb(199,21,133)", "midnightblue": "rgb(25,25,112)",
+    "mintcream": "rgb(245,255,250)", "mistyrose": "rgb(255,228,225)",
+    "moccasin": "rgb(255,228,181)", "navajowhite": "rgb(255,222,173)",
+    "navy": "rgb(0,0,128)", "oldlace": "rgb(253,245,230)",
+    "olive": "rgb(128,128,0)", "olivedrab": "rgb(107,142,35)",
+    "orange": "rgb(255,200,0)",                                       // GEOMLIB (CSS: 255,165,0)
+    "orangered": "rgb(255,69,0)", "orchid": "rgb(218,112,214)",
+    "palegoldenrod": "rgb(238,232,170)", "palegreen": "rgb(152,251,152)",
+    "paleturquoise": "rgb(175,238,238)", "palevioletred": "rgb(219,112,147)",
+    "papayawhip": "rgb(255,239,213)", "peachpuff": "rgb(255,218,185)",
+    "peru": "rgb(205,133,63)", "pink": "rgb(255,175,175)",            // GEOMLIB (CSS: 255,192,203)
+    "plum": "rgb(221,160,221)", "powderblue": "rgb(176,224,230)",
+    "purple": "rgb(128,0,128)", "rebeccapurple": "rgb(102,51,153)",
+    "red": "rgb(255,0,0)", "rosybrown": "rgb(188,143,143)",
+    "royalblue": "rgb(65,105,225)", "saddlebrown": "rgb(139,69,19)",
+    "salmon": "rgb(250,128,114)", "sandybrown": "rgb(244,164,96)",
+    "seagreen": "rgb(46,139,87)", "seashell": "rgb(255,245,238)",
+    "sienna": "rgb(160,82,45)", "silver": "rgb(192,192,192)",
+    "skyblue": "rgb(135,206,235)", "slateblue": "rgb(106,90,205)",
+    "slategray": "rgb(112,128,144)", "slategrey": "rgb(112,128,144)",
+    "snow": "rgb(255,250,250)", "springgreen": "rgb(0,255,127)",
+    "steelblue": "rgb(70,130,180)", "tan": "rgb(210,180,140)",
+    "teal": "rgb(0,128,128)", "thistle": "rgb(216,191,216)",
+    "tomato": "rgb(255,99,71)", "turquoise": "rgb(64,224,208)",
+    "violet": "rgb(238,130,238)", "wheat": "rgb(245,222,179)",
+    "white": "rgb(255,255,255)", "whitesmoke": "rgb(245,245,245)",
+    "yellow": "rgb(255,255,0)", "yellowgreen": "rgb(154,205,50)"
+};
+&nbsp;
+// Default color cycle for angle markers (#91). Each entry pairs a
+// solid edge color with a translucent face twin so concurrent markers
+// read as distinct, readable wedges. Hues are spread and deliberately
+// avoid gold (#FFD700, the highlight color) so an emphasized marker
+// still contrasts against its own fill. init() assigns these in
+// construction order; authors can override per element.
+export const anglePalette : {edge: string, face: string}[] =
+[
+    { edge: "rgb(59,110,165)",  face: "rgba(59,110,165,0.30)"  },  // blue
+    { edge: "rgb(63,142,79)",   face: "rgba(63,142,79,0.30)"   },  // green
+    { edge: "rgb(122,79,163)",  face: "rgba(122,79,163,0.30)"  },  // purple
+    { edge: "rgb(194,90,60)",   face: "rgba(194,90,60,0.30)"   },  // orange-red
+    { edge: "rgb(46,139,139)",  face: "rgba(46,139,139,0.30)"  },  // teal
+    { edge: "rgb(163,60,122)",  face: "rgba(163,60,122,0.30)"  }   // magenta
+];
+&nbsp;
+// A CSS functional colour the canvas takes as-is: rgb(), rgba(), hsl(),
+// hsla(). Strict enough that garbage can't ride through on the prefix.
+const CSS_FUNCTIONAL = /^(rgba?|hsla?)\(\s*[\d.]+%?\s*,\s*[\d.]+%?\s*,\s*[\d.]+%?\s*(,\s*[\d.]+%?\s*)?\)$/i;
+&nbsp;
+/**
+ * Resolve an authored colour to something the canvas accepts, or null for
+ * transparent. `onUnknown` (#179) is called with the raw string when nothing
+ * recognises it — the result is still null, but a caller with a slate can
+ * report it instead of letting a typo paint nothing in silence.
+ */
+export function parseColor(val: string | number, dfault: string, bgcolor: string,
+                           onUnknown?: (raw: string) =&gt; void) : string {
+    // Handle numeric 0 (from IConstructionInfo where vertexColor: 0)
+    if (val === 0) return null;
+    // Handle null/undefined → use default
+    if (val == null) return dfault;
+&nbsp;
+    let str = String(val);
+    // Transparent keywords
+    if (str === "none" || str === "0" || str === "") return null;
+    // Special keywords
+    if (str === "random") return randomColor();
+    if (str === "background") return bgcolor;
+    if (str === "brighter") return brighter(bgcolor);
+    if (str === "darker") return darker(bgcolor);
+    // Named color lookup — exact (the 13 back-compat camelCase spellings)
+    // first, then the full CSS set case-insensitively (#125).
+    if (str in colors) return colors[str];
+    let lower = str.toLowerCase();
+    if (lower in cssColors) return cssColors[lower];
+    // Hex color (e.g. "ff0000" or "#ffe9cd" → rgb(...))
+    // Java does: new Color(Integer.parseInt(str, 16))
+    // Also handle CSS #-prefixed hex which Java doesn't use but our
+    // test pages do (e.g. background: '#ffe9cd')
+    let hex = str.replace(/^#/, "");
+    if (/^[0-9a-fA-F]+$/.test(hex)) {
+        let n = parseInt(hex, 16);
+        if (!isNaN(n)) {
+            let r = (n &gt;&gt; 16) &amp; 0xFF;
+            let g = (n &gt;&gt; 8) &amp; 0xFF;
+            let b = n &amp; 0xFF;
+            return `rgb(${r},${g},${b})`;
+        }
+    }
+    // HSB comma triple (e.g. "35,19,100" → h=35/360, s=19/100, b=100/100)
+    let parts = str.split(",");
+    if (parts.length === 3) {
+        let h = parseInt(parts[0]) / 360.0;
+        let s = parseInt(parts[1]) / 100.0;
+        let b = parseInt(parts[2]) / 100.0;
+        if (!isNaN(h) &amp;&amp; !isNaN(s) &amp;&amp; !isNaN(b)) {
+            let c = HSVtoRGB(h, s, b);
+            return `rgb(${c.r},${c.g},${c.b})`;
+        }
+    }
+    // CSS functional colours pass straight through — the canvas accepts
+    // them natively, and rgba() is the one form that carries alpha. (#179)
+    if (CSS_FUNCTIONAL.test(str)) return str;
+    // Fallback — unrecognized. Transparent, as before; but say so.
+    if (onUnknown) onUnknown(str);
+    return null;
+}
+&nbsp;
+export function randomColor() : string {
+    let c = HSVtoRGB(Math.random(), Math.random(), 1.0);
+    return `rgb(${c.r},${c.g},${c.b})`;
+}
+&nbsp;
+// Java Color.brighter() — factor 0.7
+// Each component: if 0 → 3; elif &lt; 3 → 3; else min(component/0.7, 255)
+export function brighter(col: string) : string {
+    let rgb = parseRGB(col);
+    if (rgb == null) return col;
+    let FACTOR = 0.7;
+    let threshold = Math.ceil(1.0 / (1.0 - FACTOR)); // = 4
+    let r = rgb.r === 0 ? threshold : Math.min(Math.floor(rgb.r / FACTOR), 255);
+    let g = rgb.g === 0 ? threshold : Math.min(Math.floor(rgb.g / FACTOR), 255);
+    let b = rgb.b === 0 ? threshold : Math.min(Math.floor(rgb.b / FACTOR), 255);
+    if (r &lt; threshold) <span class="branch-0 cbranch-no" title="branch not covered" >r = threshold;</span>
+    if (g &lt; threshold) <span class="branch-0 cbranch-no" title="branch not covered" >g = threshold;</span>
+    if (b &lt; threshold) <span class="branch-0 cbranch-no" title="branch not covered" >b = threshold;</span>
+    return `rgb(${r},${g},${b})`;
+}
+&nbsp;
+// Java Color.darker() — factor 0.7
+// Each component: floor(component * 0.7)
+export function darker(col: string) : string {
+    let rgb = parseRGB(col);
+    if (rgb == null) <span class="branch-0 cbranch-no" title="branch not covered" >return col;</span>
+    let FACTOR = 0.7;
+    let r = Math.floor(rgb.r * FACTOR);
+    let g = Math.floor(rgb.g * FACTOR);
+    let b = Math.floor(rgb.b * FACTOR);
+    return `rgb(${r},${g},${b})`;
+}
+&nbsp;
+// Keep old names as aliases for backward compatibility with index.ts
+export function lighten(col: string) : string {
+    return brighter(col);
+}
+&nbsp;
+export function darken(col: string) : string {
+    return darker(col);
+}
+&nbsp;
+// Parse an rgb(...) string or hex color into {r, g, b} components.
+// Handles: "rgb(r,g,b)", "#rrggbb", "rrggbb", named colors, HSB triples
+function parseRGB(col: string) : {r: number, g: number, b: number} | null {
+    if (col == null) <span class="branch-0 cbranch-no" title="branch not covered" >return null;</span>
+    // rgb(r,g,b) format
+    let m = col.match(/^rgb\((\d+),(\d+),(\d+)\)$/);
+    if (m) return {r: parseInt(m[1]), g: parseInt(m[2]), b: parseInt(m[3])};
+    // Named color → resolve to rgb then re-parse
+    if (col in colors) return parseRGB(colors[col]);
+    // #rrggbb or rrggbb hex
+    let hex = col.replace(/^#/, "");
+    if (/^[0-9a-fA-F]{6}$/.test(hex)) {
+        let n = parseInt(hex, 16);
+        return {r: (n &gt;&gt; 16) &amp; 0xFF, g: (n &gt;&gt; 8) &amp; 0xFF, b: n &amp; 0xFF};
+    }
+    // HSB comma triple — parse it to get RGB
+    let parts = col.split(",");
+    if (parts.length === 3) {
+        let h = parseInt(parts[0]) / 360.0;
+        let s = parseInt(parts[1]) / 100.0;
+        let b = parseInt(parts[2]) / 100.0;
+        if (!isNaN(h) &amp;&amp; !isNaN(s) &amp;&amp; !isNaN(b)) {
+            return HSVtoRGB(h, s, b);
+        }
+    }
+    return null;
+}
+&nbsp;
+// see https://stackoverflow.com/questions/17242144/javascript-convert-hsb-hsv-color-to-rgb-accurately
+function HSVtoRGB(h: number, s: number, v: number) : {r: number, g: number, b: number} {
+    let r: number, g: number, b: number;
+    let i = Math.floor(h * 6);
+    let f = h * 6 - i;
+    let p = v * (1 - s);
+    let q = v * (1 - f * s);
+    let t = v * (1 - (1 - f) * s);
+    switch (i % 6) {
+        case 0: r = v; g = t; b = p; break;
+        case 1: r = q; g = v; b = p; break;
+        case 2: r = p; g = v; b = t; break;
+        case 3: r = p; g = q; b = v; break;
+        case 4: r = t; g = p; b = v; break;
+        case 5: r = v; g = p; b = q; break;
+    }
+    return {
+        r: Math.round(r * 255),
+        g: Math.round(g * 255),
+        b: Math.round(b * 255)
+    };
+}
+&nbsp;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2026-09-17T02:00:47.255Z
+            </div>
+        <script src="../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../sorter.js"></script>
+        <script src="../block-navigation.js"></script>
+    </body>
+</html>
+    
